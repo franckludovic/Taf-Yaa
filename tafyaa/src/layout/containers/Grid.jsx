@@ -1,6 +1,6 @@
 // components/layout/Grid.jsx
 import React from 'react';
-import '../../styles/containers.css';
+import '../../styles/Grid.css';
 
 const Grid = ({
   children,

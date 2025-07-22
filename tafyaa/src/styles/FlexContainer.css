@@ -1,0 +1,31 @@
+/* Base styles */
+.flex-container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Default directions */
+.flex-container.row {
+  flex-direction: row;
+}
+.flex-container.column {
+  flex-direction: column;
+}
+
+/* Responsive direction override */
+@media screen and (max-width: 768px) {
+  .responsive-column {
+    flex-direction: column !important;
+  }
+
+  .responsive-row {
+    flex-direction: row !important;
+  }
+
+  .flex-container {
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+}

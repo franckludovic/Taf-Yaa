@@ -1,6 +1,6 @@
 // components/layout/Column.jsx
 import React from 'react';
-import '../../styles/containers.css';
+import '../../styles/Column.css';
 
 const Column = ({ children, gap = '1rem', padding = '1rem', style }) => {
   return (

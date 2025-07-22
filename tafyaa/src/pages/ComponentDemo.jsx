@@ -12,9 +12,10 @@ import StepperInput from '../components/StepperInput';
 import ToggleSwitch from '../components/ToggleSwitch';
 import Row from '../layout/containers/Row';
 import Column from '../layout/containers/Column';
-import Container from '../layout/containers/Container';
+import Container from '../layout/containers/FlexContainer';
 import Grid from '../layout/containers/Grid';
 import Card from '../layout/containers/Card';
+import FlexContainer from '../layout/containers/FlexContainer';
 
 const ComponentDemo = () => {
   const [checked, setChecked] = useState(false);
@@ -139,11 +140,11 @@ const ComponentDemo = () => {
       </Column>
       <Divider />
 
-      <h2>Container</h2>
-      <Container direction="row" gap="24px" padding="24px">
+      <h2>Flexible Container</h2>
+      <FlexContainer direction="row" gap="24px" padding="24px">
         <div style={{ background: '#eee', padding: 8 }}>Left</div>
         <div style={{ background: '#eee', padding: 8 }}>Right</div>
-      </Container>
+      </FlexContainer>
       <Divider />
 
       <h2>Grid</h2>

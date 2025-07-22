@@ -136,3 +136,11 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 600px) {
+  .btn {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}

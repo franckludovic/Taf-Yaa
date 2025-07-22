@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/containers.css';
+import '../../styles/Card.css';
 
 function Card({
   children,

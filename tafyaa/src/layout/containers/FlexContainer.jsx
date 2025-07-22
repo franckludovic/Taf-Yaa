@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../styles/Containers.css';
+import '../../styles/FlexContainer.css';
 
 
-function Container({
+function FlexContainer({
   children,
   direction = 'row', // or 'column'
   wrap = true,
@@ -28,4 +28,4 @@ function Container({
   );
 }
 
-export default Container;
+export default FlexContainer;

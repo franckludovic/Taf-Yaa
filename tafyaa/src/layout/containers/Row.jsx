@@ -1,6 +1,6 @@
 // components/layout/Row.jsx
 import React from 'react';
-import '../../styles/containers.css';
+import '../../styles/Row.css';
 
 const Row = ({ children, gap = '1rem', padding = '1rem', wrap = true, style }) => {
   return (
