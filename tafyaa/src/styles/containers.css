@@ -1,0 +1,55 @@
+/* Base flex container */
+.responsive-container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.responsive-container.row {
+  flex-direction: row;
+}
+
+.responsive-container.column {
+  flex-direction: column;
+}
+
+/* Card styles */
+.card-container {
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.card-container.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive behavior example */
+@media screen and (max-width: 768px) {
+  .responsive-container.row {
+    flex-direction: column;
+  }
+}
+
+/* styles/layout.css */
+.layout-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.layout-grid {
+  display: grid;
+}
+
+.responsive-grid {
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
