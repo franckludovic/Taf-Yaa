@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-/* Mobile responsive adjustment */
+
 @media screen and (max-width: 768px) {
   .responsive-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

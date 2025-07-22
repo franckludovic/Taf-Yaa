@@ -1,5 +1,6 @@
 .layout-row {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
@@ -15,7 +16,7 @@
   box-sizing: border-box;
 }
 
-/* Responsive switch to column */
+
 @media screen and (max-width: 768px) {
   .layout-row {
     flex-direction: column;

@@ -12,11 +12,15 @@ const Grid = ({
   responsive = true,
   style,
 }) => {
+  const columnStyle = responsive
+    ? { gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))` }
+    : { gridTemplateColumns: `repeat(${columns}, 1fr)` };
+
   return (
     <div
       className={`layout-grid ${responsive ? 'responsive-grid' : ''}`}
       style={{
-        gridTemplateColumns: `repeat(${columns}, 1fr)`,
+        ...columnStyle,
         gap,
         width,
         height,
@@ -24,7 +28,18 @@ const Grid = ({
         ...style,
       }}
     >
-      {children}
+      {React.Children.map(children, (child) => {
+        const hasFixedWidth =
+          child?.props?.style?.width ||
+          child?.props?.width ||
+          child?.props?.className?.includes('fixed');
+
+        return (
+          <div style={{ width: hasFixedWidth ? 'auto' : '100%' }}>
+            {child}
+          </div>
+        );
+      })}
     </div>
   );
 };

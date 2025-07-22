@@ -3,17 +3,42 @@
   border: 1px solid #e5e7eb;
   padding: 1rem;
   border-radius: 8px;
-  margin: 1rem auto;
+  margin: auto;
   background-color: white;
   max-width: 100%;
   transition: box-shadow 0.3s ease;
 }
 
+
+
 .card-container.shadow {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Tablet */
+/* Position utilities */
+.pos-top-left {
+  top: 0;
+  left: 0;
+}
+.pos-top-right {
+  top: 0;
+  right: 0;
+}
+.pos-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.pos-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+.pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .card-container {
     padding: 0.75rem;
@@ -21,7 +46,6 @@
   }
 }
 
-/* Phone */
 @media (max-width: 480px) {
   .card-container {
     padding: 0.5rem;

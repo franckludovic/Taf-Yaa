@@ -27,7 +27,7 @@ label {
 
 
 .input:focus, .textarea:focus {
-  border-color: #1F724A;
+  background-color: var(--color-primary);
   outline: none;
 }
 

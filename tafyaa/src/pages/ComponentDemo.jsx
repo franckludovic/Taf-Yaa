@@ -12,10 +12,11 @@ import StepperInput from '../components/StepperInput';
 import ToggleSwitch from '../components/ToggleSwitch';
 import Row from '../layout/containers/Row';
 import Column from '../layout/containers/Column';
-import Container from '../layout/containers/FlexContainer';
 import Grid from '../layout/containers/Grid';
 import Card from '../layout/containers/Card';
 import FlexContainer from '../layout/containers/FlexContainer';
+import { CircleUser } from 'lucide-react';
+
 
 const ComponentDemo = () => {
   const [checked, setChecked] = useState(false);
@@ -127,38 +128,43 @@ const ComponentDemo = () => {
       <Divider />
 
       <h2>Row</h2>
-      <Row gap="2rem" padding="1rem">
-        <div style={{ background: '#eee', padding: 8 }}>Child 1</div>
-        <div style={{ background: '#eee', padding: 8 }}>Child 2</div>
+      <Row gap="1rem" padding="1rem" justifyContent='space-between'  >
+        <Card backgroundColor='#7c0786' height='50px' width='150px'>Card 2</Card>
+        <Card backgroundColor='#7c0786' height='50px' width='150px'>Card 2</Card>
       </Row>
       <Divider />
 
       <h2>Column</h2>
-      <Column gap="1rem" padding="1rem">
-        <div style={{ background: '#eee', padding: 8 }}>Item 1</div>
-        <div style={{ background: '#eee', padding: 8 }}>Item 2</div>
-      </Column>
+      <FlexContainer direction="column" height='400px'>
+        <Column gap="1rem" padding="1rem" justifyContent='space-between' height='100%'>
+          <Card backgroundColor='#1F724A' height='50px'> Card 1 </Card>
+          <Card backgroundColor='#1F724A' height='50px'> Card 2 </Card>
+        </Column>
+      </FlexContainer>
       <Divider />
 
       <h2>Flexible Container</h2>
-      <FlexContainer direction="row" gap="24px" padding="24px">
-        <div style={{ background: '#eee', padding: 8 }}>Left</div>
-        <div style={{ background: '#eee', padding: 8 }}>Right</div>
-      </FlexContainer>
+       <FlexContainer direction="column" responsiveDirection="row" gap="1rem">
+        <Card backgroundColor='#1F724A' height='50px'> Card 1 </Card>
+        <Card backgroundColor='#1F724A' height='50px'> Card 2 </Card>
+       </FlexContainer>
       <Divider />
 
       <h2>Grid</h2>
       <Grid columns={2} gap="10px">
-        <div style={{ background: '#eee', padding: 8 }}>Cell 1</div>
-        <div style={{ background: '#eee', padding: 8 }}>Cell 2</div>
-        <div style={{ background: '#eee', padding: 8 }}>Cell 3</div>
+        <Card backgroundColor='#1F724A' height='50px' borderRadius='5px'> Card 1 </Card>
+        <Card backgroundColor='#1F724A' height='50px'> Card 2 </Card>
+        <Card backgroundColor='#1F724A' height='50px'> Card 3 </Card>
       </Grid>
       <Divider />
 
       <h2>Card</h2>
-      <Card padding="24px" shadow borderRadius="12px">
+      <Card padding="24px" shadow borderRadius="12px" backgroundColor='black' positionType='Relative'>
         <h3>Card Title</h3>
         <p>Card content goes here.</p>
+        <Card rounded positionType='Absolute' position='top-right' backgroundColor='white' onClick={() => {}} margin='5px 5px 0px 0px' ><CircleUser strokeWidth={2} size={50} color='#1F724A'/></Card>
+        <Card width='100px'  positionType='Absolute' position='bottom-right' onClick={() => {}} margin='0px 10px 10px 0px' >others</Card>
+        <Card width='100px' positionType='Absolute' position='bottom-left' onClick={() => {}} margin='0px 0px 10px 10px' >others</Card>
       </Card>
     </div>
   );

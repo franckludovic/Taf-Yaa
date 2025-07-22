@@ -6,6 +6,8 @@ function FlexContainer({
   children,
   direction = 'row', // or 'column'
   wrap = true,
+  width = '100%',
+  height = 'auto',
   gap = '16px',
   padding = '16px',
   align = 'flex-start',
@@ -18,6 +20,9 @@ function FlexContainer({
       style={{
         gap,
         padding,
+        width,
+        height,
+        flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
         alignItems: align,
         justifyContent: justify

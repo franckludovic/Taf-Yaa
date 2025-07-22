@@ -1,0 +1,21 @@
+:root {
+  /* Primary Brand */
+  --color-primary: #16a34a;
+  --color-primary-hover: #1F724A;
+
+  /* Secondary Brand */
+  --color-secondary: #C9731E;
+  --color-secondary-hover: #8B5E3C;
+
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-gray-light: #e5e7eb;
+  --color-gray: #ccc;
+  --color-gray-dark: #888;
+
+  /* Danger & Info */
+  --color-danger: #ef4444;
+  --color-danger-hover: #dc2626;
+  --color-link: #2563eb;
+  --color-link-hover: #7c0786;
+}
