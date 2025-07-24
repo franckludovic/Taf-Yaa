@@ -23,6 +23,7 @@ function Card({
   left,
   onClick,
 }) {
+  const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
   const positionClass = position ? `pos-${position}` : '';
 
@@ -35,7 +36,11 @@ function Card({
       }
     : {};
 
-  // Combine classes and styles
+  const scale =
+    onClick && isPressed ? 'scale(0.9)' :
+    onClick && isHovered ? 'scale(1.05)' :
+    'scale(1)';
+
   const style = {
     position: positionType,
     top,
@@ -55,18 +60,19 @@ function Card({
     borderColor,
     ...circleStyles,
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    transform: onClick && isPressed ? 'scale(0.95)' : 'scale(1)',
+    transform: scale,
     cursor: onClick ? 'pointer' : 'default',
   };
 
   return (
     <div
-      className={`card-container ${shadow ? 'shadow' : ''} ${positionClass} ${className}`}
+      className={`card-container ${shadow ? 'shadow' : ''} ${positionClass} ${className} ${onClick ? 'card-clickable' : ''}`}
+      style={style}
       onClick={onClick}
+      onMouseEnter={onClick ? () => setIsHovered(true) : undefined}
+      onMouseLeave={onClick ? () => { setIsHovered(false); setIsPressed(false); } : undefined}
       onMouseDown={onClick ? () => setIsPressed(true) : undefined}
       onMouseUp={onClick ? () => setIsPressed(false) : undefined}
-      onMouseLeave={onClick ? () => setIsPressed(false) : undefined}
-      style={style}
     >
       {children}
     </div>

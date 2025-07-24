@@ -20,14 +20,14 @@ label {
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.2s ease;
-  width: 100%;  /* Make inputs fill their container */
+  width: 100%;  
   max-width: 100%;
   box-sizing: border-box; 
 }
 
 
 .input:focus, .textarea:focus {
-  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   outline: none;
 }
 

@@ -9,6 +9,7 @@ import { TextInput, SearchInput, TextArea } from '../components/Input';
 import SelectDropdown from '../components/SelectDropdown';
 import Spacer from '../components/Spacer';
 import StepperInput from '../components/StepperInput';
+import Text from '../components/Text';
 import ToggleSwitch from '../components/ToggleSwitch';
 import Row from '../layout/containers/Row';
 import Column from '../layout/containers/Column';
@@ -32,6 +33,21 @@ const ComponentDemo = () => {
   return (
     <div style={{ padding: 32 }}>
       <h1>Components Demo</h1>
+      <Divider />
+
+      <h2>Texts</h2>
+      <Text variant="heading1" bold color="primary-text" align="center">
+        Welcome to the Portal
+      </Text>
+
+      <Text variant="caption2" italic color="danger">
+        * This is a warning
+      </Text>
+
+      <Text as="p" color="gray-dark">
+        This is a paragraph rendered as a paragraph element.
+      </Text>
+
       <Divider />
 
       <h2>Button</h2>
@@ -163,7 +179,7 @@ const ComponentDemo = () => {
         <h3>Card Title</h3>
         <p>Card content goes here.</p>
         <Card rounded positionType='Absolute' position='top-right' backgroundColor='white' onClick={() => {}} margin='5px 5px 0px 0px' ><CircleUser strokeWidth={2} size={50} color='#1F724A'/></Card>
-        <Card width='100px'  positionType='Absolute' position='bottom-right' onClick={() => {}} margin='0px 10px 10px 0px' >others</Card>
+        <Card width='100px'  positionType='Absolute' position='bottom-right' onClick={() => {}} margin='0px 10px 10px 0px' ><Text variant='caption1' color='body'> others</Text></Card>
         <Card width='100px' positionType='Absolute' position='bottom-left' onClick={() => {}} margin='0px 0px 10px 10px' >others</Card>
       </Card>
     </div>
