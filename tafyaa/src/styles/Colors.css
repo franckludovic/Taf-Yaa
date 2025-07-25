@@ -9,6 +9,7 @@
 
   /* Background Colors */
   --color-white: #ffffff;
+  --color-transparent: transparent;
   --color-black: #000000;
   --color-background: #F3EDE0;
   --color-gray-light: #e5e7eb;
@@ -29,7 +30,7 @@
   /* Text Colors */
   --color-primary-text: #111827;
   --color-secondary-text: #6b7280;
-  --color-tertiary-text: #9ca3af;
+  --color-tertiary-text: #877863;
   --color-clear-text: #e5e7eb;
 
 }

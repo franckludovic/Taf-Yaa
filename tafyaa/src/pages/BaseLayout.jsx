@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import PageFrame from '../layout/containers/PageFrame';
+import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 
-function ProfileSidebar() {
-  return (
-    <div style={{ padding: 24 }}>
-      <h2>Profile</h2>
-      <p>This is a placeholder for the profile component.</p>
-      <div style={{ height: 600, background: '#e5e7eb', borderRadius: 8, marginTop: 16, padding: 16 }}>
-        Long profile content for scrolling demo...
-      </div>
-    </div>
-  );
-}
 
 export default function BaseLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,7 +18,7 @@ export default function BaseLayout() {
           </nav>
         </div>
       }
-      sidebar={<ProfileSidebar />}
+      sidebar={<ProfileSidebar onClose={() => setSidebarOpen(false)} />}
       sidebarOpen={sidebarOpen}
       onSidebarClose={() => setSidebarOpen(false)}
       footer={

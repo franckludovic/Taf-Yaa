@@ -5,7 +5,7 @@ function Card({
   children,
   padding = '10px',
   margin = 'auto',
-  shadow = true,
+  shadow = false,
   rounded = false,
   className = '',
   borderRadius = '8px',
