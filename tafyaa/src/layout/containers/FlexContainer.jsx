@@ -12,7 +12,8 @@ function FlexContainer({
   padding = '16px',
   align = 'flex-start',
   justify = 'flex-start',
-  className = ''
+  className = '',
+  backgroundColor 
 }) {
   return (
     <div
@@ -25,7 +26,8 @@ function FlexContainer({
         flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
         alignItems: align,
-        justifyContent: justify
+        justifyContent: justify,
+        backgroundColor
       }}
     >
       {children}

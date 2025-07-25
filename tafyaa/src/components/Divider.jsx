@@ -8,7 +8,7 @@ function Divider({ color = '#e5e7eb', thickness = '2px', vertical = false, borde
         borderRadius: borderRadius,
         width: vertical ? thickness : '100%',
         height: vertical ? '100%' : thickness,
-        margin: vertical ? '0 8px' : '8px 0',
+        margin: vertical ? '0 2px' : '2px 0',
         ...style,
       }}
     />
