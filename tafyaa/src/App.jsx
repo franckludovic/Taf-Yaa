@@ -4,13 +4,18 @@ import './styles/Colors.css';
 
 
 import ComponentDemo from './pages/ComponentDemo';
+import BaseLayout from './pages/BaseLayout';
+import Spacer from './components/Spacer';
 
 function App() {
   return (
     <Router>
       <Link to="/demo">View Components Demo</Link>
+      <Spacer size='10px'></Spacer>
+      <Link to="/base">View Base Layout</Link>
       <Routes>
         <Route path="/demo" element={<ComponentDemo />} />
+        <Route path="/base" element={<BaseLayout />} />
       </Routes>
     </Router>
   );

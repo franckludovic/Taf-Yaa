@@ -2,7 +2,7 @@
 import React from 'react';
 import '../../styles/Row.css';
 
-const Row = ({ children, gap = '1rem', padding = '1rem', wrap = true, width = '100%', justifyContent = 'center', style }) => {
+const Row = ({ children, gap = '1rem', padding = '1rem', /*wrap = false, */ width = '100%', justifyContent = 'center', style }) => {
   return (
     <div
       className="layout-row"
@@ -11,7 +11,7 @@ const Row = ({ children, gap = '1rem', padding = '1rem', wrap = true, width = '1
         width,
         padding,
         justifyContent,
-        flexWrap: wrap ? 'wrap' : 'nowrap',
+        // flexWrap: wrap ? 'wrap' : 'nowrap',
         ...style,
       }}
     >

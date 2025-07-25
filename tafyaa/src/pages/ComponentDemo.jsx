@@ -17,6 +17,7 @@ import Grid from '../layout/containers/Grid';
 import Card from '../layout/containers/Card';
 import FlexContainer from '../layout/containers/FlexContainer';
 import { CircleUser } from 'lucide-react';
+import PageFrame from '../layout/containers/PageFrame';
 
 
 const ComponentDemo = () => {
@@ -136,9 +137,9 @@ const ComponentDemo = () => {
           checked={toggle}
           onChange={newValue => {
             setToggle(newValue);
-            setTimeout(() => {
-              alert(newValue ? "this is On" : "this is Off");
-            }, 0);
+            // setTimeout(() => {
+            //   alert(newValue ? "this is On" : "this is Off");
+            // }, 0);
           }}
         /> 
       <Divider />
@@ -179,9 +180,28 @@ const ComponentDemo = () => {
         <h3>Card Title</h3>
         <p>Card content goes here.</p>
         <Card rounded positionType='Absolute' position='top-right' backgroundColor='white' onClick={() => {}} margin='5px 5px 0px 0px' ><CircleUser strokeWidth={2} size={50} color='#1F724A'/></Card>
-        <Card width='100px'  positionType='Absolute' position='bottom-right' onClick={() => {}} margin='0px 10px 10px 0px' ><Text variant='caption1' color='body'> others</Text></Card>
-        <Card width='100px' positionType='Absolute' position='bottom-left' onClick={() => {}} margin='0px 0px 10px 10px' >others</Card>
+        <Card width='100px'  positionType='Absolute' position='bottom-right' onClick={() => {}} margin='0px 10px 10px 0px' ><Text variant='caption1' color='danger'> others</Text></Card>
+        <Card width='100px' positionType='Absolute' position='bottom-left' onClick={() => {}} margin='0px 0px 10px 10px' ><Text variant='caption1' color='link'> others</Text></Card>
       </Card>
+
+      <h2>Basic Layout</h2>
+    <PageFrame
+    renderTopbar={() => <Card height='100%' backgroundColor="green" />}
+    renderSidebar={({ closeSidebar }) => (
+      <Card backgroundColor="grey">
+        <Button onClick={closeSidebar}>Close Sidebar</Button>
+      </Card>
+    )}
+    renderFooter={() => <Card backgroundColor="red" />}
+  >
+  {({ toggleSidebar }) => (
+    <Card backgroundColor="yellow">
+      <Button onClick={toggleSidebar}>Open Sidebar</Button>
+    </Card>
+  )}
+</PageFrame>
+
+
     </div>
   );
 };

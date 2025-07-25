@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/StepperInput.css';
 
-function StepperInput({ value, onChange }) {
-  const handleIncrement = () => onChange(value + 1);
-  const handleDecrement = () => onChange(value > 0? value - 1 : value = 0);
+function StepperInput({ value, onChange, min = 0, max = Infinity, step = 1 }) {
+  const handleIncrement = () => onChange(Math.min(max, value + step));
+  const handleDecrement = () => onChange(Math.max(min, value - step));
 
   return (
     <div className="stepper">
-      <button onClick={handleDecrement}>-</button>
-      <input type="number" value={value} readOnly />
-      <button onClick={handleIncrement}>+</button>
+      <button type="button" onClick={handleDecrement}>-</button>
+      <input type="number" value={value} readOnly aria-label="current value" />
+      <button type="button" onClick={handleIncrement}>+</button>
     </div>
   );
 }
