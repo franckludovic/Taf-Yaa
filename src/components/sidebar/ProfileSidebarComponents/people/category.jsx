@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../styles/peopleCard.css';
+import '../../../../styles/RelativesCard.css';
 
 function Category({ title, children }) {
   return (

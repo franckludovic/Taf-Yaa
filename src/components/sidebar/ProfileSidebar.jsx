@@ -78,9 +78,6 @@ export default function ProfileSidebar({ onClose, onDownload }) {
         onClose={() => setIsRecordModalOpen(false)}
       />
 
-
-
-
       <PhotoMemorySection photos={photos} onUpload={() => {}} />
     </FlexContainer>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../../../styles/peopleCard.css';
+import '../../../../styles/RelativesCard.css';
 
 
-function PeopleCard({
+function RelativesCard({
   image,
   name,
   alt = '',
@@ -12,7 +12,7 @@ function PeopleCard({
 }) {
   return (
     <div
-      className={`people-card ${className}`}
+      className={`relatives-card ${className}`}
       title={tooltip}
       onClick={onClick}
       role={onClick ? 'button' : undefined}
@@ -23,5 +23,5 @@ function PeopleCard({
   );
 }
 
-export default PeopleCard;
+export default RelativesCard;
 

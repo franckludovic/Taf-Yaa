@@ -1,18 +1,18 @@
-.people-list {
+.relatives-list {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.people-list.stacked {
+.relatives-list.stacked {
   gap: 0;
 }
 
-.people-list.stacked .people-card:not(:first-child) {
+.relatives-list.stacked .relatives-card:not(:first-child) {
   margin-left: -12px;
 }
 
-.people-card {
+.relatives-card {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -24,11 +24,11 @@
   flex-shrink: 0;
 }
 
-.people-card:hover {
+.relatives-card:hover {
   transform: scale(1.05);
 }
 
-.people-card img {
+.relatives-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;

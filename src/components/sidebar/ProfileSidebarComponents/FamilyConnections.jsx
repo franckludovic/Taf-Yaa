@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../../layout/containers/Card'
 import Text from '../../Text';
 import Category from './people/category';
-import PeopleCardList from './people/peopleCardList';
+import RelativesCardList from './people/RelativesCardList';
 import Button from '../../Button';
 import Spacer from '../../Spacer';
 
@@ -13,19 +13,19 @@ export default function FamilyConnections({ connections, onAddConnection }) {
       <Spacer size='sm' />
 
       <Category title="Spouses">
-        <PeopleCardList people={connections.spouses} />
+        <RelativesCardList relatives={connections.spouses} />
       </Category>
 
       <Category title="Children">
-        <PeopleCardList people={connections.children} />
+        <RelativesCardList relatives={connections.children} />
       </Category>
 
       <Category title="Parents">
-        <PeopleCardList people={connections.parents} />
+        <RelativesCardList relatives={connections.parents} />
       </Category>
 
       <Category title="Siblings">
-        <PeopleCardList people={connections.siblings} />
+        <RelativesCardList relatives={connections.siblings} />
       </Category>
 
       <Card padding='0px' margin='0px 0px 0px 0px' backgroundColor='var(--color-transparent)' alignItems='center' justifyContent='center'>
