@@ -22,6 +22,11 @@
   top: 0;
   left: 0;
 }
+.pos-top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .pos-top-right {
   top: 0;
   right: 0;
@@ -30,9 +35,24 @@
   bottom: 0;
   left: 0;
 }
+.pos-bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .pos-bottom-right {
   bottom: 0;
   right: 0;
+}
+.pos-left-center {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pos-right-center {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .pos-center {
   top: 50%;

@@ -24,6 +24,8 @@ import ClampText from '../components/ClampText';
 import ImageCard from '../layout/containers/ImageCard';
 import PersonCardContainer from '../layout/containers/PersonCardContainer';
 import RecordingIcon from '../components/RecordingIcon';
+import PersonCardSVG from '../layout/containers/PersonCardSVG';
+import PersonCard from '../components/PersonCard';
 
 
 
@@ -289,8 +291,42 @@ const ComponentDemo = () => {
 
       <h2>Person Card</h2>
       <Row alignItems='center' padding="0px" gap="1rem" margin='0px'>
-          <PersonCardContainer />
-          <PersonCardContainer />
+          <PersonCard
+            variant="root"
+            name="Rania Vlad Tepes"
+            sex="F"
+            birthDate="01/01/1880"
+            profileImage="/Images/image3.png" 
+            onAdd={() => {}}
+          />
+
+           <PersonCard
+            variant="dead"
+            name="Rania Vlad Tepes"
+            sex="F"
+            birthDate="01/01/1880" 
+            deathDate="01/01/1950"
+            profileImage="/Images/image3.png" 
+            onAdd={() => {}}
+          />
+
+           <PersonCard
+            variant="directline"
+            name="Rania Vlad Tepes"
+            sex="F"
+            birthDate="01/01/1880"
+            profileImage="/Images/image3.png" 
+            onAdd={() => {}}
+          />
+
+           <PersonCard
+            variant="spouce"
+            name="Rania Vlad Tepes"
+            sex="F"
+            birthDate="01/01/1880"
+            profileImage="/Images/image3.png" 
+            onAdd={() => {}}
+          />
       </Row>
         
       

@@ -32,9 +32,17 @@ const Row = ({
           child?.props?.width ||
           child?.props?.className?.includes('fixed');
 
-
+        // Center the child inside its flex cell
         return (
-          <div style={{ flex: fitContent ? 'initial' : (hasFixedWidth ? 'initial' : 1) }}>
+          <div
+            style={{
+              flex: fitContent ? 'initial' : (hasFixedWidth ? 'initial' : 1),
+              display: 'flex',
+              justifyContent: 'center', 
+              alignItems: 'center',     
+              height: '100%',
+            }}
+          >
             {child}
           </div>
         );
@@ -42,6 +50,5 @@ const Row = ({
     </div>
   );
 };
-
 
 export default Row;

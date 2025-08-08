@@ -10,6 +10,7 @@ const PersonCardContainer = ({ children, variant = "default", name, sex, birthDa
       <div className="person-card-content">
         {children}
       </div>
+      
       <button className="person-card-add-btn" onClick={onAdd}><Card rounded size={25} backgroundColor="var(--color-transparent)" positionType='absolute' onClick={onAdd}><Plus size={18} color='black' /></Card></button>
     </div>
     </Card>
