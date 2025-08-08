@@ -233,8 +233,8 @@ const ComponentDemo = () => {
           height="150px" 
         />
         <ImageCard 
-          image="/Images/image2.png" 
-          alt="Sample image 2" 
+          image="/Images/image3.png" 
+          alt="Sample image 3" 
           width="150px" 
           height="150px" 
           borderRadius="10px"
