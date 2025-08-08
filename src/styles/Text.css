@@ -20,6 +20,7 @@
   margin: 0;
 }
 
+
 /* Variants */
 .text-heading1 {
   font-size: 32px;
@@ -77,7 +78,12 @@
   text-decoration: underline;
 }
 
-/* Text utilities */
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
