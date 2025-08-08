@@ -17,14 +17,14 @@ import Grid from '../layout/containers/Grid';
 import Card from '../layout/containers/Card';
 import FlexContainer from '../layout/containers/FlexContainer';
 import { CircleUser } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import PageFrame from '../layout/containers/PageFrame';
 import AudioPlayer from '../components/AudioPLayer';
 import WaveformPlayer from '../components/WaveformPlayer';
 import Pill from '../components/pill';
 import ClampText from '../components/ClampText';
 import ImageCard from '../layout/containers/ImageCard';
+import PersonCardContainer from '../layout/containers/PersonCardContainer';
 import RecordingIcon from '../components/RecordingIcon';
+
 
 
 const ComponentDemo = () => {
@@ -286,6 +286,14 @@ const ComponentDemo = () => {
         </Text>
       </Card>
       <Divider />
+
+      <h2>Person Card</h2>
+      <Row alignItems='center' padding="0px" gap="1rem" margin='0px'>
+          <PersonCardContainer />
+          <PersonCardContainer />
+      </Row>
+        
+      
 
     </div>
   );
