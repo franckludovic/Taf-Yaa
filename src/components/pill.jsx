@@ -28,7 +28,7 @@ export default function Pill({
       style={{ display: 'inline-flex', alignItems: 'center', color, ...style }}
       {...props}
     >
-      {icon && <span style={{ marginRight: 8, display: 'flex', alignItems: 'center' }}>{icon}</span>}
+      {icon && <span style={{ display: 'flex', alignItems: 'center' }}>{icon}</span>}
       <span>{children}</span>
       {rightIcon && <span style={{ marginLeft: 8, display: 'flex', alignItems: 'center' }}>{rightIcon}</span>}
     </Card>
