@@ -5,11 +5,11 @@ import ImageCard from "../layout/containers/ImageCard";
 import Text from "./Text";
 import { Mars, Venus, Plus } from "lucide-react";
 import Row from "../layout/containers/Row";
-
+import { AdminBadge, ModeratorBadge, EditorBadge, ViewerBadge } from "./PersonBadge";
 //variants are root, directline, spouce, dead
 
-function PersonCard({ variant = "default", style, name, sex, birthDate, deathDate, profileImage, onAdd }) {
-  // Helper to format date as "18 Feb 2000"
+function PersonCard({ variant = "default", style, name, sex, birthDate, deathDate, role = 'viewer', profileImage, onAdd, onClick }) {
+
   const formatDate = (dateStr) => {
     if (!dateStr) return "";
     const date = new Date(dateStr);
@@ -20,10 +20,25 @@ function PersonCard({ variant = "default", style, name, sex, birthDate, deathDat
     });
   };
 
+  const finalRole = (role) => {
+    if (role === 'admin') {
+      return <AdminBadge position="top-right" margin="-1px -1px 0px 0px" />;
+    }
+    if (role === 'moderator') {
+      return <ModeratorBadge position="top-right" margin="-1px -1px 0px 0px" />;
+    }
+    if (role === 'editor') {
+      return <EditorBadge position="top-right" margin="-1px -1px 0px 0px" />;
+    }
+    return <ViewerBadge position="top-right" margin="-1px -1px 0px 0px" />;
+  }
+
   return (
     <PersonCardSVG className="person-card" style={style} variant={variant}>
+      <div onClick={onClick}>
       <Card positionType="relative" backgroundColor="var(--color-transparent)" padding="3px 3px 0px 3px">
         <ImageCard overlay={deathDate ? { backgroundColor: "var(--color-gray)", opacity: 0.45 } : null} width="100%" height="83px" borderRadius="17px" image={profileImage} />
+        {finalRole(role)}
         <Row fitContent gap="0.10rem" padding="4px 0px 0px 0px" >
           {sex === "M" ? <Mars size={20} strokeWidth={3} color="var(--color-male)" /> : <Venus strokeWidth={3} size={25} color="var(--color-female)" />}
           <Text as="p" ellipsis variant="body1" bold>{name}</Text>
@@ -58,6 +73,7 @@ function PersonCard({ variant = "default", style, name, sex, birthDate, deathDat
         }
 
       </Card>
+      </div>
     </PersonCardSVG>
   );
 }

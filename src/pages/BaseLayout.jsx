@@ -40,7 +40,7 @@ export default function BaseLayout() {
         </button>
       </Card>
 
-      <ComponentDemo />
+      <ComponentDemo setSidebarOpen={setSidebarOpen} />
 
       </>
     </PageFrame>

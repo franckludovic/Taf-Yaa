@@ -8,11 +8,14 @@ function ImageCard({
   alt = '',
   padding = '0px',
   borderRadius = '20px',
+  positionType = 'static',
+  position = '',
   backgroundColor = "var(--color-grey)",
   image,
   rounded = false,
   size,
-  overlay = null, // Accepts { backgroundColor, opacity }
+  overlay = null, 
+  margin,
 }) {
   const [imageURL, setImageURL] = useState('');
 
@@ -32,6 +35,9 @@ function ImageCard({
     display: 'block',
   };
 
+  // Add positionType and positionClass to Card
+  const positionClass = position ? `pos-${position}` : '';
+
   return (
     <Card
       borderColor="var(--color-transparent)"
@@ -41,7 +47,8 @@ function ImageCard({
       backgroundColor={backgroundColor}
       width={finalWidth}
       height={finalHeight}
-      style={{ overflow: 'hidden', position: 'relative' }}
+      style={{ overflow: 'hidden', position: positionType, margin }}
+      className={positionClass}
     >
       {imageURL ? (
         <img src={imageURL} alt={alt} loading="lazy" style={imageStyle} width={finalWidth} height={finalHeight} />

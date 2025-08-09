@@ -29,7 +29,7 @@ import PersonCard from '../components/PersonCard';
 
 
 
-const ComponentDemo = () => {
+const ComponentDemo = ({setSidebarOpen}) => {
   const [checked, setChecked] = useState(false);
   const [date, setDate] = useState('');
   const [step, setStep] = useState(1);
@@ -232,7 +232,8 @@ const ComponentDemo = () => {
           image="/Images/image1.png" 
           alt="Sample image 1" 
           width="150px" 
-          height="150px" 
+          height="150px"
+          borderRadius="10px" 
         />
         <ImageCard 
           image="/Images/image3.png" 
@@ -297,6 +298,7 @@ const ComponentDemo = () => {
             sex="F"
             birthDate="01/01/1880"
             profileImage="/Images/image3.png" 
+            onClick={() => setSidebarOpen(true)}
             onAdd={() => {}}
           />
 
@@ -304,9 +306,11 @@ const ComponentDemo = () => {
             variant="dead"
             name="Rania Vlad Tepes"
             sex="F"
+            role='admin'
             birthDate="01/01/1880" 
             deathDate="01/01/1950"
             profileImage="/Images/image3.png" 
+            onClick={() => setSidebarOpen(false)}
             onAdd={() => {}}
           />
 
@@ -314,17 +318,21 @@ const ComponentDemo = () => {
             variant="directline"
             name="Rania Vlad Tepes"
             sex="F"
+            role='moderator'
             birthDate="01/01/1880"
             profileImage="/Images/image3.png" 
+            onClick={() => setSidebarOpen(true)}
             onAdd={() => {}}
           />
 
            <PersonCard
             variant="spouce"
+            role='editor'
             name="Rania Vlad Tepes"
             sex="F"
             birthDate="01/01/1880"
-            profileImage="/Images/image3.png" 
+            profileImage="/Images/image3.png"
+            onClick={() => setSidebarOpen(false)} 
             onAdd={() => {}}
           />
       </Row>
