@@ -2,6 +2,7 @@
 :root {
   --sidebar-width: 350px;
   --topbar-height: 52px;
+  --DefaultNavColor: #F3EDE0
   --z-topbar: 1000;
   --z-sidebar: 999;
   --z-overlay: 998;
@@ -23,11 +24,12 @@
   top: 0;
   z-index: var(--z-topbar);
   height: var(--topbar-height);
-  background: #1a4e02;
+  background: var(--color-background);
   color: white;
   display: flex;
   align-items: center;
   padding: 0 1rem;
+  overflow-y: visible;
 }
 
 .pf-body {

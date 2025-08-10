@@ -61,7 +61,7 @@ const ComponentDemo = ({setSidebarOpen}) => {
 
       <h2>Texts</h2>
       <Text variant="heading1" bold color="primary-text" align="center">
-        Welcome to the Portal
+        Welcome to Taf'Yaa
       </Text>
 
       <Text variant="caption2" italic color="danger">
