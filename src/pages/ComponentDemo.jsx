@@ -294,33 +294,33 @@ const ComponentDemo = ({setSidebarOpen}) => {
       <Row alignItems='center' padding="0px" gap="1rem" margin='0px'>
           <PersonCard
             variant="root"
-            name="Rania Vlad Tepes"
+            name="Vishanti"
             sex="F"
             birthDate="01/01/1880"
-            profileImage="/Images/image3.png" 
+            profileImage="/Images/image5.jpg" 
             onClick={() => setSidebarOpen(true)}
             onAdd={() => {}}
           />
 
            <PersonCard
             variant="dead"
-            name="Rania Vlad Tepes"
+            name="Vishanti Vlad Tepes"
             sex="F"
             role='admin'
             birthDate="01/01/1880" 
             deathDate="01/01/1950"
-            profileImage="/Images/image3.png" 
+            profileImage="/Images/image6.jpg" 
             onClick={() => setSidebarOpen(false)}
             onAdd={() => {}}
           />
 
            <PersonCard
             variant="directline"
-            name="Rania Vlad Tepes"
+            name="Vishanti Vlad Tepes"
             sex="F"
             role='moderator'
             birthDate="01/01/1880"
-            profileImage="/Images/image3.png" 
+            profileImage="/Images/image7.jpg" 
             onClick={() => setSidebarOpen(true)}
             onAdd={() => {}}
           />
@@ -328,10 +328,10 @@ const ComponentDemo = ({setSidebarOpen}) => {
            <PersonCard
             variant="spouce"
             role='editor'
-            name="Rania Vlad Tepes"
+            name="Vishanti Vlad Tepes"
             sex="F"
             birthDate="01/01/1880"
-            profileImage="/Images/image3.png"
+            profileImage="/Images/image8.jpg"
             onClick={() => setSidebarOpen(false)} 
             onAdd={() => {}}
           />
